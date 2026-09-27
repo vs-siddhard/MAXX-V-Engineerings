@@ -81,10 +81,10 @@ export const Footer: React.FC<FooterProps> = ({ onQuoteClick }) => {
                 <span className="text-[10px] text-slate-500 uppercase block">Main Business Office:</span>
                 <a
                   href={`tel:${COMPANY_DATA.businessPhones[0].raw}`}
-                  className="flex items-center gap-2 text-white hover:text-[#E30613] font-bold transition-colors mt-0.5"
+                  className="flex items-center gap-2 text-white hover:text-[#E30613] font-bold transition-colors mt-0.5 whitespace-nowrap"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#E30613] shrink-0" />
-                  <span>{COMPANY_DATA.businessPhones[0].display}</span>
+                  <span className="whitespace-nowrap">{COMPANY_DATA.businessPhones[0].display}</span>
                 </a>
               </div>
 
@@ -92,10 +92,10 @@ export const Footer: React.FC<FooterProps> = ({ onQuoteClick }) => {
                 <span className="text-[10px] text-slate-500 uppercase block">Direct Workshop Contact:</span>
                 <a
                   href={`tel:${COMPANY_DATA.personalPhone.raw}`}
-                  className="flex items-center gap-2 text-white hover:text-[#E30613] font-bold transition-colors mt-0.5"
+                  className="flex items-center gap-2 text-white hover:text-[#E30613] font-bold transition-colors mt-0.5 whitespace-nowrap"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#E30613] shrink-0" />
-                  <span>{COMPANY_DATA.personalPhone.display}</span>
+                  <span className="whitespace-nowrap">{COMPANY_DATA.personalPhone.display}</span>
                 </a>
               </div>
 

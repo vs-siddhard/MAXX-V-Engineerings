@@ -140,8 +140,8 @@ export const Location: React.FC = () => {
                       className="flex items-center justify-between p-2.5 bg-black/60 hover:bg-[#E30613]/10 border border-white/10 hover:border-[#E30613] text-white transition-colors"
                     >
                       <div className="flex items-center gap-2.5">
-                        <Phone className="w-3.5 h-3.5 text-[#E30613]" />
-                        <span className="font-mono text-xs font-bold">{phone.display}</span>
+                        <Phone className="w-3.5 h-3.5 text-[#E30613] shrink-0" />
+                        <span className="font-mono text-xs font-bold whitespace-nowrap">{phone.display}</span>
                       </div>
                       <span className="text-[10px] font-mono text-slate-400">{phone.label}</span>
                     </a>

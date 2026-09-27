@@ -35,24 +35,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onQuoteClick }) => {
             : 'bg-[#0B0B0B]/85 backdrop-blur-sm border-b border-white/10 py-3.5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-12 flex-nowrap gap-3 xl:gap-6">
           
-          {/* Logo & Brand Wordmark */}
+          {/* Logo & Brand Wordmark (Positioned clean on left) */}
           <a
             href="#home"
-            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E30613]"
+            className="shrink-0 flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E30613]"
           >
             <Logo variant={isLight ? 'light-bg' : 'dark-bg'} size="sm" showTrio={true} />
           </a>
 
-          {/* Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          {/* Navigation Links - shrink-0, cleanly spaced, non-colliding */}
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-3.5 2xl:gap-5 shrink-0 mx-auto">
             {COMPANY_DATA.navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-xs uppercase tracking-wider font-bold transition-colors relative py-1 focus:outline-none focus-visible:text-[#E30613] ${
+                className={`text-[11px] xl:text-xs uppercase tracking-wider font-bold transition-colors relative py-1 px-1 whitespace-nowrap shrink-0 focus:outline-none focus-visible:text-[#E30613] ${
                   isLight
                     ? 'text-slate-700 hover:text-[#E30613]'
                     : 'text-slate-300 hover:text-[#E30613]'
@@ -64,8 +64,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onQuoteClick }) => {
           </nav>
 
           {/* Right Header Actions: ThemeToggle, Instagram, Main Phone, Quote CTA */}
-          <div className="hidden sm:flex items-center gap-3">
-            {/* Theme Toggle */}
+          <div className="hidden sm:flex items-center gap-2 xl:gap-2.5 shrink-0">
+            {/* Theme Toggle (Sleek square icon button) */}
             <ThemeToggle />
 
             {/* Instagram Link */}
@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onQuoteClick }) => {
               rel="noopener noreferrer"
               aria-label="Follow MAXX V ENGINEERINGS on Instagram"
               title="Follow @maxxvengineerings on Instagram"
-              className="p-2 text-slate-400 hover:text-white hover:bg-white/5 border border-white/10 hover:border-[#E30613]/50 rounded-sm transition-all"
+              className="p-2 text-slate-400 hover:text-white hover:bg-white/5 border border-white/10 hover:border-[#E30613]/50 rounded-sm transition-all shrink-0"
             >
               <Instagram className="w-4 h-4 text-[#E30613]" />
             </a>
@@ -83,24 +83,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onQuoteClick }) => {
             {/* Clickable Main Phone Line */}
             <a
               href={`tel:${COMPANY_DATA.businessPhones[0].raw}`}
-              className={`hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono border rounded-sm transition-colors ${
+              className={`hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono border rounded-sm transition-colors whitespace-nowrap shrink-0 ${
                 isLight
                   ? 'text-slate-800 bg-slate-100 hover:bg-slate-200 border-slate-300 hover:border-[#E30613]'
                   : 'text-slate-300 hover:text-white border-white/10 hover:border-[#E30613]/50'
               }`}
               title="Call Main Office"
             >
-              <Phone className="w-3.5 h-3.5 text-[#E30613]" />
-              <span>{COMPANY_DATA.businessPhones[0].display}</span>
+              <Phone className="w-3.5 h-3.5 text-[#E30613] shrink-0" />
+              <span className="whitespace-nowrap">{COMPANY_DATA.businessPhones[0].display}</span>
             </a>
 
             {/* Primary CTA Button */}
             <button
               onClick={onQuoteClick}
-              className="btn-primary px-4 py-2 text-xs"
+              className="btn-primary px-3.5 py-2 text-xs whitespace-nowrap shrink-0"
             >
               <span>Get a Quote</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
             </button>
           </div>
 

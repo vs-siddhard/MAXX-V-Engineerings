@@ -88,12 +88,12 @@ export const BusinessCard: React.FC = () => {
               </div>
               <div className="font-mono text-xs font-bold text-[#E30613] space-y-1">
                 <div>
-                  <a href={`tel:${COMPANY_DATA.businessPhones[0].raw}`} className="hover:underline">
+                  <a href={`tel:${COMPANY_DATA.businessPhones[0].raw}`} className="hover:underline whitespace-nowrap">
                     {COMPANY_DATA.businessPhones[0].display} (Main Office)
                   </a>
                 </div>
                 <div>
-                  <a href={`tel:${COMPANY_DATA.personalPhone.raw}`} className="hover:underline">
+                  <a href={`tel:${COMPANY_DATA.personalPhone.raw}`} className="hover:underline whitespace-nowrap">
                     {COMPANY_DATA.personalPhone.display} (Direct Contact)
                   </a>
                 </div>

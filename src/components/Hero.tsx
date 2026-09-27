@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onExploreWorkClick }) 
           <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
             <button
               onClick={onQuoteClick}
-              className="btn-primary btn-precision group px-7 py-3.5 text-xs sm:text-sm font-bold shadow-lg"
+              className="btn-primary btn-precision group px-7 py-3.5 text-xs sm:text-sm font-bold shadow-lg whitespace-nowrap"
             >
               <span className="relative z-10">GET A QUOTE</span>
               <ArrowUpRight className="w-4 h-4 text-[#E30613] group-hover:text-white transition-colors relative z-10" />
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onExploreWorkClick }) 
 
             <button
               onClick={onExploreWorkClick}
-              className="btn-secondary btn-precision group px-7 py-3.5 text-xs sm:text-sm font-bold shadow-lg"
+              className="btn-secondary btn-precision group px-7 py-3.5 text-xs sm:text-sm font-bold shadow-lg whitespace-nowrap"
             >
               <span className="relative z-10">VIEW OUR WORK</span>
             </button>
@@ -91,7 +91,7 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onExploreWorkClick }) 
               href={COMPANY_DATA.googleDirectionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-slate-600 hover:text-[#E30613] transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-3.5 text-xs font-mono font-bold uppercase tracking-wider text-slate-600 hover:text-[#E30613] transition-colors whitespace-nowrap"
             >
               <Compass className="w-4 h-4 text-[#E30613]" />
               <span>DIRECTIONS</span>
@@ -100,11 +100,13 @@ export const Hero: React.FC<HeroProps> = ({ onQuoteClick, onExploreWorkClick }) 
 
           {/* Location & Quick Contact kicker */}
           <div className="mt-8 pt-5 border-t border-slate-200 flex flex-wrap items-center justify-between text-xs font-mono text-slate-600 gap-2">
-            <div>
+            <div className="whitespace-nowrap">
               <span className="text-black font-bold">AUTONAGAR, GUNTUR</span> (AP – 522001)
             </div>
-            <div className="text-[#E30613] font-bold">
-              {COMPANY_DATA.businessPhones[0].display}
+            <div className="text-[#E30613] font-bold whitespace-nowrap">
+              <a href={`tel:${COMPANY_DATA.businessPhones[0].raw}`} className="hover:underline">
+                {COMPANY_DATA.businessPhones[0].display}
+              </a>
             </div>
           </div>
 

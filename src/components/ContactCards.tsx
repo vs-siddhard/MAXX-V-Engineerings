@@ -57,7 +57,7 @@ export const ContactCards: React.FC<ContactCardsProps> = ({ onQuoteClick }) => {
               <span className="text-[10px] font-mono text-[#E30613] font-bold uppercase tracking-wider block">
                 MAIN BUSINESS LINE
               </span>
-              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 ${
+              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 whitespace-nowrap ${
                 isLight ? 'text-black' : 'text-white'
               }`}>
                 {COMPANY_DATA.businessPhones[0].display}
@@ -96,7 +96,7 @@ export const ContactCards: React.FC<ContactCardsProps> = ({ onQuoteClick }) => {
               <span className="text-[10px] font-mono text-[#E30613] font-bold uppercase tracking-wider block">
                 BUSINESS LINE 2
               </span>
-              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 ${
+              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 whitespace-nowrap ${
                 isLight ? 'text-black' : 'text-white'
               }`}>
                 {COMPANY_DATA.businessPhones[1].display}
@@ -135,7 +135,7 @@ export const ContactCards: React.FC<ContactCardsProps> = ({ onQuoteClick }) => {
               <span className="text-[10px] font-mono text-[#E30613] font-bold uppercase tracking-wider block">
                 BUSINESS LINE 3
               </span>
-              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 ${
+              <div className={`text-base sm:text-lg font-black font-mono group-hover:text-[#E30613] transition-colors mt-1 whitespace-nowrap ${
                 isLight ? 'text-black' : 'text-white'
               }`}>
                 {COMPANY_DATA.businessPhones[2].display}
@@ -217,11 +217,11 @@ export const ContactCards: React.FC<ContactCardsProps> = ({ onQuoteClick }) => {
 
             <a
               href={`tel:${COMPANY_DATA.personalPhone.raw}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-black hover:bg-[#E30613] text-white font-mono text-sm font-bold border border-white/20 hover:border-[#E30613] transition-colors rounded-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-black hover:bg-[#E30613] text-white font-mono text-sm font-bold border border-white/20 hover:border-[#E30613] transition-colors rounded-sm whitespace-nowrap shrink-0"
             >
-              <Phone className="w-4 h-4 text-[#E30613]" />
-              <span>{COMPANY_DATA.personalPhone.display}</span>
-              <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
+              <Phone className="w-4 h-4 text-[#E30613] shrink-0" />
+              <span className="whitespace-nowrap">{COMPANY_DATA.personalPhone.display}</span>
+              <ArrowUpRight className="w-3.5 h-3.5 ml-1 shrink-0" />
             </a>
           </div>
         </div>

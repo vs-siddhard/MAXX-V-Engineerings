@@ -44,7 +44,7 @@ export const QuickActions: React.FC = () => {
                 <span className="text-[11px] font-mono text-[#E30613] font-bold uppercase tracking-wider block">
                   Call Us (Main Line)
                 </span>
-                <span className={`text-base sm:text-lg font-black font-mono tracking-tight group-hover:text-[#E30613] transition-colors ${
+                <span className={`text-base sm:text-lg font-black font-mono tracking-tight group-hover:text-[#E30613] transition-colors whitespace-nowrap ${
                   isLight ? 'text-black' : 'text-white'
                 }`}>
                   {COMPANY_DATA.businessPhones[0].display}
@@ -77,7 +77,7 @@ export const QuickActions: React.FC = () => {
                 <span className="text-[11px] font-mono text-[#E30613] font-bold uppercase tracking-wider block">
                   Call Us (Direct Contact)
                 </span>
-                <span className={`text-base sm:text-lg font-black font-mono tracking-tight group-hover:text-[#E30613] transition-colors ${
+                <span className={`text-base sm:text-lg font-black font-mono tracking-tight group-hover:text-[#E30613] transition-colors whitespace-nowrap ${
                   isLight ? 'text-black' : 'text-white'
                 }`}>
                   {COMPANY_DATA.personalPhone.display}
