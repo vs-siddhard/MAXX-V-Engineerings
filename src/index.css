@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', 'Montserrat', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --color-brand-red: #E30613;
+    --color-brand-black: #0B0B0B;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Crisp Industrial Technical Grid (Black/Red palette) */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-tech-grid-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 11, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 11, 11, 0.05) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Laser-Cut Perforated Sheet Metal Texture pattern */
+.bg-perforated-metal {
+  background-color: #111111;
+  background-image: radial-gradient(#222222 18%, transparent 20%);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+/* Diagonal Angular Slant Cutouts as seen in the Reference Image */
+.clip-diagonal-left {
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+.clip-diagonal-right {
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.clip-chevron-right {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+
+.clip-angle-banner {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+}
+
+/* Industrial Geometric Panels */
+.panel-dark {
+  background-color: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.panel-dark-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.panel-dark-hover:hover {
+  border-color: #E30613;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(227, 6, 19, 0.2);
+}
+
+.panel-white {
+  background-color: #FFFFFF;
+  color: #0B0B0B;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Technical CAD crosshair corners in Red */
+.cad-corner-tl {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #E30613;
+  border-left: 2px solid #E30613;
+  pointer-events: none;
+}
+
+.cad-corner-tr {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #E30613;
+  border-right: 2px solid #E30613;
+  pointer-events: none;
+}
+
+.cad-corner-bl {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #E30613;
+  border-left: 2px solid #E30613;
+  pointer-events: none;
+}
+
+.cad-corner-br {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #E30613;
+  border-right: 2px solid #E30613;
+  pointer-events: none;
+}
+
+/* Red Divider Lines */
+.red-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #E30613 25%, #E30613 75%, transparent 100%);
+}
+
+.red-divider-solid {
+  height: 3px;
+  background-color: #E30613;
+}
+
+/* Button System: Sharp/Angular, Red & Black */
+.btn-primary {
+  background-color: #0B0B0B;
+  color: #FFFFFF;
+  border: 2px solid #E30613;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  background-color: #E30613;
+  color: #FFFFFF;
+  border-color: #E30613;
+  box-shadow: 0 0 20px rgba(227, 6, 19, 0.4);
+}
+
+.btn-secondary {
+  background-color: #E30613;
+  color: #FFFFFF;
+  border: 2px solid #E30613;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-secondary:hover {
+  background-color: #0B0B0B;
+  color: #FFFFFF;
+  border-color: #0B0B0B;
+}
+
+/* Precision Engineering Button Offset Stroke Hover Animation */
+.btn-precision {
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.22s ease;
+}
+
+/* 2px offset stroke that expands outward slightly on hover reflecting precision tolerance */
+.btn-precision::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #E30613;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: inset 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease,
+              box-shadow 0.24s ease;
+  z-index: 1;
+}
+
+.btn-precision:hover {
+  transform: translateY(-1px);
+}
+
+.btn-precision:hover::before {
+  inset: -5px; /* Precision 2px stroke offset expands 5px beyond button boundary */
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0 14px rgba(227, 6, 19, 0.35);
+}
+
+.btn-precision:active {
+  transform: translateY(0px);
+}
+
+.btn-precision:active::before {
+  inset: -3px;
+  opacity: 0.9;
+}
+
+.btn-white {
+  background-color: #FFFFFF;
+  color: #0B0B0B;
+  border: 2px solid #0B0B0B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+.btn-white:hover {
+  background-color: #E30613;
+  color: #FFFFFF;
+  border-color: #E30613;
+}
+
+/* Subtle Animated Laser Light Effect */
+@keyframes laserSweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0.2;
+  }
+}
+
+.animate-laser-sweep {
+  animation: laserSweep 3.5s ease-in-out infinite;
+}
+
+@keyframes laserPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #E30613, 0 0 20px #E30613;
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #E30613, 0 0 35px #E30613, 0 0 50px rgba(227, 6, 19, 0.6);
+  }
+}
+
+.animate-laser-pulse {
+  animation: laserPulse 1.8s ease-in-out infinite;
+}
